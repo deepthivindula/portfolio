@@ -1,0 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a23;
+  color: #e0e0e0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.tag-gradient-odd {
+  background: linear-gradient(to right, #ff2e63, #6b6bff);
+}
+.tag-gradient-even {
+  background: linear-gradient(to right, #00f7ff, #ff2e63);
+}
+.tag {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tag:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.5);
+  animation: pulse 0.5s infinite alternate;
+}
+nav {
+  background: linear-gradient(to right, #16213e, #4b0082);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ff2e63;
+}
+section {
+  padding: 40px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide 1s ease-out forwards;
+}
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00f7ff;
+  animation: bounce 0.5s ease-in-out;
+}
+p, li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.skills-list, .languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.skill-item, .language-item {
+  background: #16213e;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+a {
+  color: #00f7ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #ff2e63;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
